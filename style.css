@@ -1,0 +1,85 @@
+:root {
+  --bg: #ffffff;
+  --text: #1c1d21;
+  --muted: #5b5f6a;
+  --line: #e6e7eb;
+  --soft: #f5f6f8;
+  --accent: #2f6fde;
+  --warn-bg: #fff6e5;
+  --warn-line: #f2d49b;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111214;
+    --text: #ececef;
+    --muted: #a3a6ae;
+    --line: #2a2c31;
+    --soft: #1a1b1f;
+    --accent: #7aa7ff;
+    --warn-bg: #2a2213;
+    --warn-line: #5a4720;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+header.site {
+  border-bottom: 1px solid var(--line);
+}
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.brand { font-weight: 700; font-size: 18px; color: var(--text); text-decoration: none; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 18px; font-size: 15px; }
+nav a:first-child { margin-left: 0; }
+nav a[aria-current="page"], nav a:hover { color: var(--accent); }
+.wrap { max-width: 760px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+main { padding-top: 32px; padding-bottom: 56px; }
+h1 { font-size: 30px; line-height: 1.25; margin: 0 0 6px; }
+h2 { font-size: 20px; margin: 34px 0 10px; }
+.meta { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+a { color: var(--accent); }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+.table-scroll { overflow-x: auto; margin: 12px 0; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { background: var(--soft); font-weight: 600; }
+.card {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin: 16px 0;
+}
+.note {
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-line);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 16px 0;
+}
+.links { display: grid; gap: 12px; margin-top: 24px; }
+.links a {
+  display: block;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+}
+.links a:hover { border-color: var(--accent); }
+.links span { display: block; color: var(--muted); font-size: 14px; }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer .wrap { padding-top: 20px; padding-bottom: 28px; }
