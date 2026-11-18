@@ -1,6 +1,6 @@
 # listenlylang.github.io
 
-Public legal pages for Listenly and every Listenly language app, served with GitHub Pages.
+Public legal pages for Reado and every Reado language app, served with GitHub Pages.
 
 | Page | URL |
 |---|---|
